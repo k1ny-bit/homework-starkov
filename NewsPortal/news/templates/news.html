@@ -1,0 +1,10 @@
+{% extends 'default.html' %}
+{% load custom_filters %}
+{% block betweenbody %}
+           {% for x in news %}
+           <h1> {{ x.title|censor }} </h1>
+           <p> {{ x.text|censor|preview:20 }} </p>
+           <p> {{ x.posted|readability }} </p>
+           {% endfor %}
+{% endblock betweenbody %}
+

@@ -1,0 +1,7 @@
+{% extends 'default.html' %}
+{% load custom_filters %}
+{% block betweenbody %}
+    <h1> {{ xyz.title|censor }} </h1>
+    <p> {{ xyz.text|censor }} </p>
+    <p> {{ xyz.posted|readability_2 }} </p>
+{% endblock betweenbody %}
